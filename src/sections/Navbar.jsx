@@ -29,14 +29,14 @@ function Navigation() {
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="fixed inset-x-0 z-20 w-full backdrop-blur-lg bg-primary/40">
-      <div className="mx-auto c-space max-w-7xl">
+    <div className="fixed top-[5px] rounded-2xl py-3 inset-x-0 z-20 w-[calc(100%-10px)] backdrop-blur-lg bg-primary/40 m-auto">
+      <div className="mx-auto c-space max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between py-2 sm:py-0">
           <a
             href="/"
             className="text-xl font-bold transition-colors text-neutral-400 hover:text-white"
           >
-            Ali
+            Danish Khan
           </a>
           <button
             onClick={() => setIsOpen(!isOpen)}
