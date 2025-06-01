@@ -1,4 +1,7 @@
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
+import IconMap from "./IconMap";
+import { useEffect } from "react";
+
 const ProjectDetails = ({
   title,
   description,
@@ -8,41 +11,76 @@ const ProjectDetails = ({
   href,
   closeModal,
 }) => {
+  // Prevent scrolling when modal is open
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, []);
+
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center w-full h-full overflow-hidden backdrop-blur-sm">
+    <div className="fixed inset-0 z-50 flex items-center justify-center w-full h-full overflow-y-auto px-2 sm:px-4 py-4 sm:py-8 bg-black/60 backdrop-blur-md">
       <motion.div
-        className="relative max-w-2xl border shadow-sm rounded-2xl bg-gradient-to-l from-midnight to-navy border-white/10"
-        initial={{ opacity: 0, scale: 0.5 }}
-        animate={{ opacity: 1, scale: 1 }}
+        className="relative w-full max-w-4xl mx-auto rounded-xl shadow-2xl bg-gradient-to-br from-navy/95 to-midnight/95 border border-white/10 max-h-[90vh] overflow-y-auto"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ type: "spring", damping: 25, stiffness: 200 }}
       >
         <button
           onClick={closeModal}
-          className="absolute p-2 rounded-sm top-5 right-5 bg-midnight hover:bg-gray-500"
+          className="absolute z-10 p-1.5 sm:p-2 rounded-full top-2 right-2 sm:top-3 sm:right-3 md:top-5 md:right-5 bg-black/50 hover:bg-white/20 transition-all duration-300"
+          aria-label="Close modal"
         >
-          <img src="assets/close.svg" className="w-6 h-6" />
+          <img src="assets/close.svg" className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" alt="Close" />
         </button>
-        <img src={image} alt={title} className="w-full rounded-t-2xl" />
-        <div className="p-5">
-          <h5 className="mb-2 text-2xl font-bold text-white">{title}</h5>
-          <p className="mb-3 font-normal text-neutral-400">{description}</p>
-          {subDescription.map((subDesc, index) => (
-            <p className="mb-3 font-normal text-neutral-400">{subDesc}</p>
-          ))}
-          <div className="flex items-center justify-between mt-4">
-            <div className="flex gap-3">
-              {tags.map((tag) => (
-                <img
-                  key={tag.id}
-                  src={tag.path}
-                  alt={tag.name}
-                  className="rounded-lg size-10 hover-animation"
-                />
+        
+        <div className="flex flex-col md:flex-row">
+          <div className="w-full md:w-1/2">
+            <img 
+              src={image} 
+              alt={title} 
+              className="w-full h-48 sm:h-64 md:h-full object-cover rounded-t-xl md:rounded-l-xl md:rounded-tr-none" 
+            />
+          </div>
+          
+          <div className="w-full md:w-1/2 p-4 sm:p-5 md:p-8 flex flex-col">
+            <h2 className="mb-3 md:mb-4 text-xl sm:text-2xl md:text-3xl font-bold text-white tracking-tight">{title}</h2>
+            <div className="space-y-2 sm:space-y-3 text-sm sm:text-base text-neutral-300 flex-grow mb-4 sm:mb-6">
+              <p>{description}</p>
+              {subDescription.map((subDesc, index) => (
+                <p key={index}>{subDesc}</p>
               ))}
             </div>
-            <a className="inline-flex items-center gap-1 font-medium cursor-pointer hover-animation">
-              View Project{" "}
-              <img src="assets/arrow-up.svg" className="size-4" href={href} />
-            </a>
+            
+            <div className="mt-auto">
+              <h3 className="text-xs sm:text-sm font-semibold text-white/70 mb-2">TECHNOLOGIES</h3>
+              <div className="flex flex-wrap gap-2 sm:gap-3 mb-4 sm:mb-6">
+                {tags.map((tag) => {
+                  const IconComponent = IconMap[tag.icon];
+                  return IconComponent ? (
+                    <div
+                      key={tag.id}
+                      className="flex items-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-1 sm:py-1.5 bg-white/5 rounded-full hover:bg-white/10 transition-all"
+                      title={tag.name}
+                    >
+                      <IconComponent className="text-base sm:text-lg" />
+                      <span className="text-[10px] sm:text-xs">{tag.name}</span>
+                    </div>
+                  ) : null;
+                })}
+              </div>
+              
+              <a
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-1.5 sm:gap-2 w-full px-4 sm:px-5 py-2 sm:py-2.5 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white text-sm sm:text-base font-medium rounded-lg transition-all duration-300"
+              >
+                View Project
+                <img src="assets/arrow-up.svg" className="size-3 sm:size-4" alt="Arrow" />
+              </a>
+            </div>
           </div>
         </div>
       </motion.div>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ProjectDetails from "./ProjectDetails";
+import  IconMap  from "./IconMap"; // Assuming you have an IconMap file
 
 const Project = ({
   title,
@@ -21,9 +22,15 @@ const Project = ({
         <div>
           <p className="text-2xl">{title}</p>
           <div className="flex gap-5 mt-2 text-sand">
-            {tags.map((tag) => (
-              <span key={tag.id}>{tag.name}</span>
-            ))}
+            {tags.map((tag) => {
+              const IconMao = IconMap[tag.icon];
+              return (
+                <div key={tag.id} className="flex items-center gap-1">
+                  {IconMao && <IconMao className="text-lg" />}
+                  <span>{tag.name}</span>
+                </div>
+              );
+            })}
           </div>
         </div>
         <button
