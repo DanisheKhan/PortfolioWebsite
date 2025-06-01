@@ -36,48 +36,64 @@ const SectionWrapper = (Component, idName) => function HOC() {
 
 const skillsTimeline = [
   {
-    period: "2021-2023",
-    title: "Security & Defense Skills",
-    icon: "🔒", // You can replace with actual icon component
+    period: "2021-2022",
+    title: "Frontend Foundations",
+    icon: "🎨",
     iconBg: "#383E56",
     skills: [
-      { name: "Security Standards", level: 90 },
-      { name: "MapsUI", level: 90 },
-      { name: "Windows Forms & WPF", level: 85 },
-      { name: "C# Development", level: 85 },
-      { name: "XML to SVG Conversion", level: 80 },
-      { name: "X-DOM", level: 75 }
+      { name: "HTML5", level: 90 },
+      { name: "CSS3", level: 85 },
+      { name: "JavaScript", level: 80 },
+      { name: "Responsive Design", level: 75 },
+      { name: "UI/UX Fundamentals", level: 70 },
+      { name: "Tailwind CSS", level: 75 }
     ],
-    description: "Skills developed while working on security and defense projects, focusing on application security, map interfaces, and industrial automation."
+    description: "Built foundational web development skills with a focus on creating responsive interfaces and basic interactive elements."
+  },
+  {
+    period: "2022-2023",
+    title: "Interactive Frontend Development",
+    icon: "⚡",
+    iconBg: "#E6DEDD",
+    skills: [
+      { name: "React.js", level: 85 },
+      { name: "Tailwind CSS", level: 90 },
+      { name: "State Management", level: 80 },
+      { name: "Component Design", level: 85 },
+      { name: "JavaScript ES6+", level: 85 },
+      { name: "Frontend Deployment", level: 75 }
+    ],
+    description: "Advanced to building interactive single-page applications with React, focusing on component-based architecture and modern styling approaches."
   },
   {
     period: "2023-2024",
-    title: "Back-End & Automotive Skills",
-    icon: "🚗", // You can replace with actual icon component
-    iconBg: "#E6DEDD",
-    skills: [
-      { name: "Large-Scale Data Systems", level: 90 },
-      { name: "Vehicle-to-Cloud Communication", level: 85 },
-      { name: "API Development", level: 90 },
-      { name: "ISO 26262 Compliance", level: 80 },
-      { name: "Data Privacy Protocols", level: 85 },
-      { name: "Telemetry Systems", level: 85 }
-    ],
-    description: "Skills acquired during automotive industry work, specializing in vehicle data systems, telemetry, and secure communication protocols."
-  },
-  {
-    period: "2025-Present",
-    title: "Modern Web Development",
-    icon: "🌐", // You can replace with actual icon component
+    title: "Full-Stack Development",
+    icon: "🔄",
     iconBg: "#1d1836",
     skills: [
-      { name: "React", level: 80 },
-      { name: "Three.js", level: 75 },
-      { name: "Vite", level: 75 },
-      { name: "WebAPI", level: 80 },
-      { name: "JavaScript", level: 85 },
+      { name: "Node.js", level: 80 },
+      { name: "Express", level: 80 },
+      { name: "MongoDB", level: 75 },
+      { name: "RESTful APIs", level: 85 },
+      { name: "Authentication", level: 80 },
+      { name: "Full-Stack Deployment", level: 75 }
     ],
-    description: "Current focus on modern web development technologies, creating interactive and visually appealing web applications."
+    description: "Expanded into full-stack development, creating applications with backend functionality, data persistence, and user authentication."
+  },
+  {
+    period: "2024-Present",
+    title: "Advanced Web Applications",
+    icon: "🚀",
+    iconBg: "#0a0a23",
+    skills: [
+      { name: "MERN Stack", level: 85 },
+      { name: "Content Management", level: 80 },
+      { name: "App Optimization", level: 75 },
+      { name: "Real-time Features", level: 70 },
+      { name: "API Integration", level: 85 },
+      { name: "Advanced React Patterns", level: 80 }
+    ],
+    description: "Currently focusing on building complex web applications with advanced features, content management, and optimized user experiences."
   }
 ];
 
@@ -136,7 +152,6 @@ const Timeline = () => {
         <h2 className={styles.sectionHeadText}>Skills Timeline.</h2>
         <p className={styles.sectionSubText}>MY TECHNICAL JOURNEY</p>
 
-        <div className="bg-gradient-to-r from-transparent via-neutral-700 to-transparent mt-6 h-[1px] w-full" />
       </motion.div>
 
       <div className="mt-16 flex flex-col section-spacing c-space">
