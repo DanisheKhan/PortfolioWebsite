@@ -55,6 +55,15 @@ body {
   overflow-x: hidden;
 }
 
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari and Opera */
+}
+
 .c-space {
   @apply sm:px-10 px-5 lg:px-15;
 }
