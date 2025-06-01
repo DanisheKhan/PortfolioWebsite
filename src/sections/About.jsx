@@ -98,15 +98,15 @@ const About = () => {
         </div>
         {/* Grid 5 */}
         <div className="grid-default-color grid-5">
-          <div className="z-10 w-[50%]">
-            <section id="tech-stack" class="p-6 rounded-xl">
-              <h2 class="text-2xl font-bold mb-4">🛠️ Tech Stack</h2>
-              <span>Full-Stack Web Developer | React, Node.js, MongoDB, Express, Next.js, TypeScript, JavaScript | Building Scalable & Modern Web Applications | Never Stop Building</span>
+          <div className="z-10 w-[60%]">
+            <section id="tech-stack" className="rounded-xl">
+              <h2 className="text-2xl font-bold ">🛠️ Tech Stack</h2>
+              <span className="z-20">Full-Stack Web Developer | React, Node.js, MongoDB, Express, Next.js, TypeScript, JavaScript | Building Scalable & Modern Web Applications | Never Stop Building</span>
             </section>
 
           </div>
-          <div className="absolute inset-y-0 md:inset-y-9 w-full h-full start-[50%] md:scale-125">
-            <Frameworks />
+          <div className="z-0 absolute inset-y-0 md:inset-y-5 w-full h-full start-[60%] md:scale-125">
+            <Frameworks className="z-0" />
           </div>
         </div>
       </div>
