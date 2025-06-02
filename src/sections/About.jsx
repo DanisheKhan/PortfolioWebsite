@@ -101,7 +101,7 @@ const About = () => {
           <div className="z-10 w-[60%]">
             <section id="tech-stack" className="rounded-xl">
               <h2 className="text-2xl font-bold ">🛠️ Tech Stack</h2>
-              <span className="z-20">Full-Stack Web Developer | React, Node.js, MongoDB, Express, Next.js, TypeScript, JavaScript | Building Scalable & Modern Web Applications | Never Stop Building</span>
+              <span className="z-20">Full-Stack Web Developer | React, Node.js, MongoDB, Express, Next.js, TypeScript, JavaScript | Never Stop Building.</span>
             </section>
 
           </div>
