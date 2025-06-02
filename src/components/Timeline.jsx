@@ -36,7 +36,7 @@ const SectionWrapper = (Component, idName) => function HOC() {
 
 const skillsTimeline = [
   {
-    period: "2021-2022",
+    period: "2022-2023",
     title: "Frontend Foundations",
     icon: "🎨",
     iconBg: "#383E56",
@@ -51,7 +51,7 @@ const skillsTimeline = [
     description: "Built foundational web development skills with a focus on creating responsive interfaces and basic interactive elements."
   },
   {
-    period: "2022-2023",
+    period: "2023-2024",
     title: "Interactive Frontend Development",
     icon: "⚡",
     iconBg: "#E6DEDD",
@@ -81,7 +81,7 @@ const skillsTimeline = [
     description: "Expanded into full-stack development, creating applications with backend functionality, data persistence, and user authentication."
   },
   {
-    period: "2024-Present",
+    period: "2025-Present",
     title: "Advanced Web Applications",
     icon: "🚀",
     iconBg: "#0a0a23",
