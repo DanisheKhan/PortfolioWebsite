@@ -268,7 +268,7 @@ export const mySocials = [
   },
   {
     name: "Linkedin",
-    href: "www.linkedin.com/in/danishkhan-jsx",
+    href: "https://www.linkedin.com/in/danishkhan-jsx",
     icon: "/assets/socials/linkedIn.svg",
   },
   {

@@ -37,9 +37,9 @@ const Projects = () => {
 
   // Create a no-op function for mobile devices
   const handleSetPreview = isMobile ? () => { } : setPreview;
-
   return (
     <section
+      id="projects"
       onMouseMove={handleMouseMove}
       className="relative c-space section-spacing"
     >

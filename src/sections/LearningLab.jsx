@@ -251,9 +251,8 @@ export default function LearningLab() {
       }
     }
   };
-
   return (
-    <div className="items-start mt-16 md:mt-24 py-8 md:py-16 c-space" ref={sectionRef}>
+    <div id="learning" className="items-start mt-16 md:mt-24 py-8 md:py-16 c-space" ref={sectionRef}>
       <h2 className="text-heading text-center md:text-left">Learning Lab</h2>
       <p className="max-w-2xl mt-3 text-base md:text-lg text-white/70 text-center md:text-left mx-auto md:mx-0">
         Explore my journey of continuous learning through these projects, each representing key skills and techniques I've mastered along the way.
