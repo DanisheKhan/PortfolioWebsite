@@ -151,13 +151,13 @@ function TechStack() {
       ref={sectionRef}
     >
       {/* Background particles */}
-      <Particles
+      {/* <Particles
         className="absolute inset-0 -z-10"
         quantity={80}
         color="#ffffff"
         staticity={15}
         size={0.6}
-      />
+      /> */}
 
       <div className="relative z-10">
         <div className="text-center mb-10">
@@ -222,7 +222,9 @@ function TechStack() {
             role="tabpanel"
             aria-labelledby={`tab-${activeCategory}`}
           >
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
+            <div
+              className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4"
+            >
               {skills[activeCategory]?.map((skill, index) => (
                 <SkillCard
                   key={skill.name}
