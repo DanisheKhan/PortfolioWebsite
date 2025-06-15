@@ -1,6 +1,43 @@
 export const myProjects = [
   {
     id: 1,
+    title: "Home Share",
+    description:
+      "A comprehensive property listing platform that allows users to browse, search, and filter real estate listings with detailed property information and image galleries.",
+    subDescription: [
+      "Developed a full-stack real estate application using Express.js and MongoDB for backend functionality.",
+      "Implemented user authentication with sessions and password hashing for secure account management.",
+      "Created dynamic listing pages with image galleries, maps integration, and property details.",
+      "Built an intuitive interface with filtering options, search functionality, and responsive design for all devices.",
+    ],
+    href: "https://project-2-c1ib.onrender.com/listings",
+    logo: "",
+    image: "/assets/projects/p2.png",
+    tags: [
+      {
+        id: 1,
+        name: "Node.js",
+        icon: "FaNodeJs",
+      },
+      {
+        id: 2,
+        name: "Express",
+        icon: "SiExpress",
+      },
+      {
+        id: 3,
+        name: "MongoDB",
+        icon: "SiMongodb",
+      },
+      {
+        id: 4,
+        name: "Bootstrap",
+        icon: "SiBootstrap",
+      },
+    ],
+  },
+  {
+    id: 2,
     title: "Mega Blog",
     description:
       "A full-featured blogging platform that allows users to create, edit, and publish articles with rich text editing capabilities and seamless image management.",
@@ -33,43 +70,6 @@ export const myProjects = [
         id: 4,
         name: "TailwindCSS",
         icon: "SiTailwindcss",
-      },
-    ],
-  },
-  {
-    id: 2,
-    title: "Real Estate Listings",
-    description:
-      "A comprehensive property listing platform that allows users to browse, search, and filter real estate listings with detailed property information and image galleries.",
-    subDescription: [
-      "Developed a full-stack real estate application using Express.js and MongoDB for backend functionality.",
-      "Implemented user authentication with sessions and password hashing for secure account management.",
-      "Created dynamic listing pages with image galleries, maps integration, and property details.",
-      "Built an intuitive interface with filtering options, search functionality, and responsive design for all devices.",
-    ],
-    href: "https://project-2-c1ib.onrender.com/listings",
-    logo: "",
-    image: "/assets/projects/p2.png",
-    tags: [
-      {
-        id: 1,
-        name: "Node.js",
-        icon: "FaNodeJs",
-      },
-      {
-        id: 2,
-        name: "Express",
-        icon: "SiExpress",
-      },
-      {
-        id: 3,
-        name: "MongoDB",
-        icon: "SiMongodb",
-      },
-      {
-        id: 4,
-        name: "Bootstrap",
-        icon: "SiBootstrap",
       },
     ],
   },

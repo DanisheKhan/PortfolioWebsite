@@ -5,6 +5,15 @@ import { useState, useEffect, useRef } from "react";
 // Learning projects based on your provided links
 const learningProjects = [
   {
+    id: "HomeShare",
+    title: "Real Estate Listings",
+    tech: "MERN Stack, Authentication",
+    image: "/assets/projects/p2.png",
+    description: "Created a real estate platform with property listings, search functionality, and user accounts.",
+    link: "https://homeshare-9joh.onrender.com/listings",
+    lesson: "Mastered handling complex data relationships and implementing search filters."
+  },
+  {
     id: "megaBlog",
     title: "Full-Stack Blog Platform",
     tech: "React, Appwrite, React Form Hook",
@@ -13,15 +22,7 @@ const learningProjects = [
     link: "https://mega-blog-brown-eta.vercel.app/",
     lesson: "Learned how to implement authentication flows and content management systems."
   },
-  {
-    id: "realEstate",
-    title: "Real Estate Listings",
-    tech: "MERN Stack, Authentication",
-    image: "/assets/projects/p2.png",
-    description: "Created a real estate platform with property listings, search functionality, and user accounts.",
-    link: "https://project-2-c1ib.onrender.com/listings",
-    lesson: "Mastered handling complex data relationships and implementing search filters."
-  },
+
   {
     id: "frontendShowcase",
     title: "Tailwind Showcase",
