@@ -7,6 +7,7 @@ import Contact from "./sections/Contact";
 import Footer from './sections/Footer';
 import LearningLab from "./sections/LearningLab";
 import Experiences from "./sections/Experiences";
+import TechStack from "./sections/TechStack";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <Navbar />
       <Hero />
       <About />
+      <TechStack />
       <Projects />
       <Experiences />
       <LearningLab />
