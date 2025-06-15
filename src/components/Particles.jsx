@@ -103,18 +103,16 @@ export const Particles = ({
     resizeCanvas();
     drawParticles();
   };
-
   const onMouseMove = () => {
     if (canvasRef.current) {
       const rect = canvasRef.current.getBoundingClientRect();
       const { w, h } = canvasSize.current;
       const x = mousePosition.x - rect.left - w / 2;
       const y = mousePosition.y - rect.top - h / 2;
-      const inside = x < w / 2 && x > -w / 2 && y < h / 2 && y > -h / 2;
-      if (inside) {
-        mouse.current.x = x;
-        mouse.current.y = y;
-      }
+
+      // Always update mouse position regardless of hover state
+      mouse.current.x = x;
+      mouse.current.y = y;
     }
   };
 

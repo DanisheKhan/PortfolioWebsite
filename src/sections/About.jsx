@@ -3,6 +3,7 @@ import Card from "../components/Card";
 import { Globe } from "../components/globe";
 import CopyEmailButton from "../components/CopyEmailButton";
 import Frameworks from "../components/Frameworks";
+import { Particles } from "../components/Particles";
 
 const About = () => {
   const grid2Container = useRef();
@@ -95,18 +96,16 @@ const About = () => {
             </p>
             <CopyEmailButton />
           </div>
-        </div>
-        {/* Grid 5 */}
-        <div className="grid-default-color grid-5">
-          <div className="z-10 w-[60%]">
+        </div>        {/* Grid 5 */}
+        <div className="grid-default-color grid-5 relative overflow-hidden">
+          
+          <div className="z-10 w-full p-3">
             <section id="tech-stack" className="rounded-xl">
-              <h2 className="text-2xl font-bold ">🛠️ Tech Stack</h2>
-              <span className="z-20">Full-Stack Web Developer | React, Node.js, MongoDB, Express, Next.js, TypeScript, JavaScript | Never Stop Building.</span>
+              <h2 className="text-l sm:text-2xl font-bold mb-1 sm:mb-2">📌 Portfolio Summary</h2>
+              <span className="z-20 block text-xs sm:text-sm md:text-base leading-tight sm:leading-normal">
+                Full-Stack Web Developer skilled in building scalable web applications using the MERN stack. Proficient in developing responsive UIs, secure APIs, and real-time features. Strong grasp of Data Structures & Algorithms, with a focus on clean code and performance optimization.
+              </span>
             </section>
-
-          </div>
-          <div className="z-0 absolute inset-y-0 md:inset-y-5 w-full h-full start-[60%] md:scale-125">
-            <Frameworks className="z-0" />
           </div>
         </div>
       </div>

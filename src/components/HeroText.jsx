@@ -62,7 +62,25 @@ const HeroText = () => {
             transition={{ delay: 1.8 }}
           >
             Web Solutions
-          </motion.p>
+          </motion.p>          {/* Resume Download Button */}
+          <motion.div 
+            className="mt-8"
+            variants={variants}
+            initial="hidden"
+            animate="visible"
+            transition={{ delay: 2.0 }}
+          >
+            <a
+              href="/DanishKhan_Resume.pdf"
+              download="DanishKhan_Resume.pdf"
+              className="inline-flex items-center gap-2 px-5 py-3 text-base lg:text-lg font-medium text-white transition-all duration-300 bg-indigo-600 rounded-full hover:bg-indigo-700 hover:translate-y-[-2px] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-lg hover:shadow-indigo-500/30"
+            >
+              <span>Download Resume</span>
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+            </a>
+          </motion.div>
         </div>
       </div>
       {/* Mobile View */}
@@ -105,7 +123,25 @@ const HeroText = () => {
             transition={{ delay: 1.8 }}
           >
             Web Applications
-          </motion.p>
+          </motion.p>          {/* Mobile Resume Download Button */}
+          <motion.div
+            className="flex justify-center w-full mt-6"
+            variants={variants}
+            initial="hidden"
+            animate="visible"
+            transition={{ delay: 2.0 }}
+          >
+            <a
+              href="/DanishKhan_Resume.pdf"
+              download="DanishKhan_Resume.pdf"
+              className="inline-flex items-center gap-2 px-5 py-2 text-base font-medium text-white transition-all duration-300 bg-indigo-600 rounded-full hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            >
+              <span>Download CV</span>
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+            </a>
+          </motion.div>
         </div>
       </div>
     </div>
